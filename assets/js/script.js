@@ -86,7 +86,7 @@ function propiedadesBuscadas() {
         return;
     }
     // Alertar si los metros cuadrados superan las propiedades disponibles
-    if (metrosDesde < 0 || metrosHasta > 500) {
+    else if (metrosDesde < 0 || metrosHasta > 500) {
         alert('No se encuentran disponibles propiedades superiores a 500 metros cuadrados');
         return;
     }
@@ -97,7 +97,7 @@ function propiedadesBuscadas() {
             propiedad.cuartos === cuartos &&
             propiedad.metros >= metrosDesde &&
             propiedad.metros <= metrosHasta
-        )
+        );
     });
 
     // Contador de propiedades totales
@@ -114,7 +114,7 @@ function propiedadesBuscadas() {
 };
 
 // Evento click al boton de busqueda
-buscarBtn.addEventListener("click", propiedadesBuscadas);
+buscarBtn.addEventListener("click", propiedadesBuscadas)
 
 // Recargar pagina 
 reinicioBtn.addEventListener("click", () => {
